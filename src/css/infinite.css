@@ -1,0 +1,526 @@
+@import url("loading.css");
+
+body {
+	background-color: white;
+	margin: 0;
+	padding: 0;
+}
+
+div {
+	cursor: default;
+}
+
+p {
+	cursor: default;
+}
+
+/* MAIN PAGE */
+#news {
+	display: none;
+	position: relative;
+	width: 100vw;
+	height: 100vh;
+	overflow: hidden;
+	overflow-y: auto;
+	overflow-x: hidden;
+	background-color: black;
+}
+
+
+.scroll {
+	width: 100%;
+	display: flex;
+	border: 0px white solid;
+}
+
+.upcoming-issue {
+	font-size: 18vh;
+	font-family: 'Raleway', sans-serif;
+	font-weight: 900;
+	line-height: 1.05;
+	color: black;
+	-webkit-text-stroke-width: 2px;
+	-webkit-text-stroke-color: white;
+	white-space: nowrap;
+	text-transform: uppercase;
+	text-align: center;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.release-box {
+	font-size: 8vh;
+	font-family: 'Raleway', sans-serif;
+	font-weight: 900;
+	line-height: 1.05;
+	color: black;
+	-webkit-text-stroke-width: 2px;
+	-webkit-text-stroke-color: white;
+	white-space: nowrap;
+	text-transform: uppercase;
+	text-align: center;
+}
+
+.release-cover {
+	text-align: center;
+	display: grid;
+	grid-auto-flow: column;
+	grid-auto-columns: calc(100vw / 5);
+}
+
+.release-cover img {
+	width: 20vw;
+}
+
+#blur {
+	filter: blur(.4vw);
+	animation: animate-blur 3s ease-in-out infinite;
+	animation-direction: normal;
+	z-index: 0;
+}
+
+#clear {
+	z-index: 1;
+	transition: 0.25s;
+}
+
+#clear:hover {
+	transform: scale(1.05);
+}
+
+.new-release-text a{
+	color: white;
+}
+
+.row3 div,
+.row5 div {
+	font-size: 14.5vh;
+	font-family: 'Raleway', sans-serif;
+	font-weight: 900;
+	line-height: 1.05;
+	color: black;
+	-webkit-text-stroke-width: 2px;
+	-webkit-text-stroke-color: white;
+	white-space: nowrap;
+	text-transform: uppercase;
+	animation: animate var(--animation-speed) linear infinite;
+	animation-delay: calc(-1*var(--animation-speed));
+	animation-direction: normal;
+}
+
+.row3 div:nth-child(2),
+.row5 div:nth-child(2) {
+	animation: animate2 var(--animation-speed) linear infinite;
+	animation-delay: calc(-.5*var(--animation-speed));
+	animation-direction: normal;
+}
+
+.row1 div,
+.row2 div,
+.row4 div {
+	font-size: 14.5vh;
+	font-family: 'Raleway', sans-serif;
+	font-weight: 900;
+	line-height: 1.05;
+	color: black;
+	-webkit-text-stroke-width: 2px;
+	-webkit-text-stroke-color: white;
+	white-space: nowrap;
+	text-transform: uppercase;
+	animation: animate var(--animation-speed) linear infinite;
+	animation-delay: calc(-1*var(--animation-speed));
+	animation-direction: reverse;
+}
+
+.row1 div,
+.row2 div:nth-child(2),
+.row4 div:nth-child(2) {
+	animation: animate2 var(--animation-speed) linear infinite;
+	animation-delay: calc(-.5*var(--animation-speed));
+	animation-direction: reverse;
+}
+
+
+
+@keyframes animate {
+	0% {
+		transform: translateX(100%);
+	}
+
+	100% {
+		transform: translateX(-100%);
+	}
+}
+
+@keyframes animate2 {
+	0% {
+		transform: translateX(0%);
+	}
+
+	100% {
+		transform: translateX(-200%);
+	}
+}
+
+@keyframes animate-blur {
+
+	0% {
+		transform: translateX(0%)
+	}
+
+	50% {
+		transform: translateX(-3%)
+	}
+}
+
+.row1 div {
+	font-size: 26.36vh;
+	-webkit-text-stroke-width: 2px;
+	-webkit-text-stroke-color: black;
+	color: white;
+	line-height: 1.05;
+	margin-top: -5px;
+
+}
+
+
+/* HOVER COLOR CHANGES */
+.row3:hover,
+.row4:hover,
+.row5:hover {
+	--animation-speed: 150s;
+	background-color: white;
+	-webkit-text-stroke-width: 2px;
+	-webkit-text-stroke-color: black;
+	font-size: 110px;
+	font-family: 'Raleway', sans-serif;
+	font-weight: 900;
+	cursor: pointer;
+}
+
+
+
+
+/* ABOUT PAGE */
+
+#about {
+	display: none;
+}
+
+
+#abouttext {
+	font-size: 3.8vw;
+	text-align: justify;
+	padding: 50px;
+	font-family: 'Overpass', sans-serif;
+	text-transform: uppercase;
+	font-weight: 400;
+	-webkit-text-stroke-width: 0px;
+	-webkit-text-stroke-color: black;
+	color: black;
+	background-color: white;
+	line-height: 2;
+	z-index: 2;
+	margin-top: -10px;
+}
+
+#abouttext>span {
+	cursor: pointer;
+}
+
+#aboutback {
+	font-size: 20px;
+	color: black;
+	font-family: 'Overpass', sans-serif;
+	font-weight: 200;
+	cursor: pointer;
+}
+
+#hoverdiv {
+	pointer-events: none;
+}
+
+#hoverimg {
+	height: 77vh;
+	width: auto;
+}
+
+.centerphoto {
+	position: fixed;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+}
+
+.centerimg {
+	width: 60%;
+	height: auto;
+	display: block;
+	margin: auto;
+	z-index: 999;
+}
+
+
+
+/* ISSUES PAGE */
+#issuetext {
+	font-family: 'Overpass', sans-serif;
+	font-size: min(8.4vw, 100px);
+	font-weight: 200;
+	-webkit-text-stroke-width: 0px;
+	-webkit-text-stroke-color: black;
+	color: black;
+	text-align: left;
+	margin-top: 40vh;
+	margin-left: 10px;
+	position: -webkit-sticky;
+	position: sticky;
+	top: 40vh;
+	align-self: flex-start;
+}
+
+.issuetheme {
+	font-family: 'Overpass', sans-serif;
+	font-size: min(8.4vw, 100px);
+	font-weight: 200;
+	-webkit-text-stroke-width: 0px;
+	-webkit-text-stroke-color: black;
+	color: black;
+	text-align: right;
+	position: -webkit-sticky;
+	position: sticky;
+	align-self: flex-start;
+	margin-left: auto;
+	min-width: 24.7vw;
+	max-width: 24.7vw;
+	/*width: 23.5vw;*/
+	height: 10vw;
+	padding: 0;
+}
+
+#issuethemedown {
+	margin-top: 40vh;
+	top: 40vh;
+	width: 23vw;
+	height: 10vw;
+}
+
+#issues {
+	background-color: white;
+	display: flex;
+	height: 100%;
+	width: 100%;
+	display: none;
+}
+
+#issuenumber {
+	font-family: 'Overpass', sans-serif;
+	font-size: 600px;
+	font-weight: 800;
+	-webkit-text-stroke-width: 2px;
+	-webkit-text-stroke-color: black;
+	color: black;
+	text-align: center;
+	margin-top: 43vh;
+	padding-bottom: 0vh;
+	margin-bottom: 0vh;
+	margin-left: auto;
+	margin-right: auto;
+	width: 100vw;
+	display: inline-block;
+	cursor: pointer;
+	line-height: 13vh;
+}
+
+.issuenumber>span {
+	text-decoration: underline;
+	text-decoration-color: #0000EE;
+}
+
+.space {
+	height: 80vh;
+}
+
+#coverimg {
+	height: 80vh;
+	width: auto;
+	display: block;
+	margin: auto;
+	z-index: 999;
+	pointer-events: none;
+}
+
+#cover {
+	pointer-events: none;
+	display: none;
+}
+
+#issuesback {
+	position: fixed;
+	font-size: 20px;
+	color: black;
+	font-family: 'Overpass', sans-serif;
+	font-weight: 200;
+	margin-left: 10px;
+	margin-top: 10px;
+	cursor: pointer;
+}
+
+
+
+/* MOBILE COMPATIBILITY */
+
+@media screen and (max-width: 768px) {
+
+	.marquee span {
+		padding: 0 10px;
+	}
+
+	#issuenumber {
+		font-size: 60vw;
+		margin-top: 38vh;
+	}
+
+
+	#coverimg {
+		width: 43vw;
+		height: auto;
+		margin-top: -5vh;
+	}
+
+	#hoverimg {
+		width: auto;
+		height: 40vh;
+	}
+
+}
+
+@media screen and (max-width: 566px) {
+	.issue-box {
+		height: 60vh;
+		align-content: center;
+		justify-content: center;
+	}
+
+	.upcoming-issue {
+		font-size: 18vh;
+		font-family: 'Raleway', sans-serif;
+		font-weight: 900;
+		line-height: 1.05;
+		color: black;
+		-webkit-text-stroke-width: 2px;
+		-webkit-text-stroke-color: white;
+		white-space: nowrap;
+		text-transform: uppercase;
+		text-align: center;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+	}
+
+	.release-box {
+		height: 100%;
+	}
+
+	.release-cover {
+		text-align: center;
+		height: 82%;
+		display: grid;
+		grid-auto-flow: column;
+		grid-auto-columns: 100vw;
+		justify-items: center;
+	}
+
+	.release-cover img {
+		height: 100%;
+		width: 90%;
+	}
+
+	#blur {
+		display: none;
+	}
+
+	#clear{
+		animation: animate-grow 2s ease-in-out infinite;
+	}
+	@keyframes animate-grow {
+
+		0% {
+			transform: scale(1)
+		}
+	
+		50% {
+			transform: scale(1.025)
+		}
+	}
+
+
+
+	.upcoming-issue {
+		margin-top: 20%;
+		font-size: 15vw;
+		margin-bottom: 20%;
+	}
+
+	.row3 div,
+	.row5 div {
+		font-size: 14.5vw;
+		font-family: 'Raleway', sans-serif;
+		font-weight: 900;
+		line-height: 1.05;
+		color: black;
+		-webkit-text-stroke-width: 2px;
+		-webkit-text-stroke-color: white;
+		white-space: nowrap;
+		text-transform: uppercase;
+		animation: animate var(--animation-speed) linear infinite;
+		animation-delay: calc(-1*var(--animation-speed));
+		animation-direction: normal;
+	}
+
+	.row3 div:nth-child(2),
+	.row5 div:nth-child(2) {
+		animation: animate2 var(--animation-speed) linear infinite;
+		animation-delay: calc(-.5*var(--animation-speed));
+		animation-direction: normal;
+	}
+
+	.row1 div {
+		font-size: 20vw
+	}
+
+	.row2 div,
+	.row4 div {
+		font-size: 14.5vw;
+		font-family: 'Raleway', sans-serif;
+		font-weight: 900;
+		line-height: 1.05;
+		color: black;
+		-webkit-text-stroke-width: 2px;
+		-webkit-text-stroke-color: white;
+		white-space: nowrap;
+		text-transform: uppercase;
+		animation: animate var(--animation-speed) linear infinite;
+		animation-delay: calc(-1*var(--animation-speed));
+		animation-direction: reverse;
+	}
+
+	.row2 div {
+		margin-top: 5%;
+	}
+
+	.row1 div,
+	.row2 div:nth-child(2),
+	.row4 div:nth-child(2) {
+		animation: animate2 var(--animation-speed) linear infinite;
+		animation-delay: calc(-.5*var(--animation-speed));
+		animation-direction: reverse;
+	}
+
+	#abouttext {
+		font-size: 3vh;
+		padding: 10px;
+	}
+
+}

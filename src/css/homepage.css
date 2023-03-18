@@ -1,0 +1,41 @@
+:root {
+    --animation-speed: 37s;
+}
+.homepage{
+    position: relative;
+	width: 100vw;
+	height: 100vh;
+	overflow-y: auto;
+	overflow-x: hidden;
+	background-color: black;
+}
+.links{
+	cursor: pointer;
+}
+
+#title{
+	font-size: 26.5vh;
+	color: black;
+	background-color: white;
+}
+
+#banner{
+	font-size: 14.5vh;
+}
+
+.ticker  #banner  div :hover{
+	background-color: 'white';
+}
+
+
+@media screen and (max-width: 566px) {
+.homepage .ticker{
+	padding: 5%;
+}
+#title{
+	font-size: 26.5vw;
+}
+#banner{
+	font-size: 14.5vw;
+}
+}

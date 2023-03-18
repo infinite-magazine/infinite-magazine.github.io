@@ -1,0 +1,117 @@
+.countdown{
+    min-height: 60vh;
+    justify-content: center;
+    z-index: -1;
+    padding:3%;
+}
+.dimension-container{
+    position:relative;
+    margin-top:-10%;
+    height:100%;
+    width:100%;
+    align-content: center;
+    vertical-align: center;
+    text-align: center;
+    justify-items: center;
+}
+
+.dimension{
+    text-align: center;
+    position:absolute;
+    left:0;
+    width:100%;
+
+    z-index: 0;
+    color:black;
+    font-size: 45vw;
+    
+    /*font-family: 'Raleway', sans-serif;*/
+	font-weight: 900;
+	line-height: 1.05;
+    
+	-webkit-text-stroke-width: 2px;
+	-webkit-text-stroke-color: white;
+
+    animation: expansion calc(var(--animation-speed)/5) ease infinite;
+    animation-direction: normal;
+}
+#dim-1{
+    animation-delay: 500ms;
+}
+#dim-2{
+    animation-delay: 1000ms;
+}
+#dim-3{
+    animation-delay: 1500ms;
+}
+#dim-4{
+    animation-delay: 2000ms;
+}
+#dim-5{
+    animation-delay: 2500ms;
+}
+
+@keyframes expansion{
+    0%{
+        transform:SkewX(0deg);
+    }
+    
+    50%{
+        transform:SkewX(20deg);
+    }
+    100%{
+        transform:SkewX(0deg);
+    }
+}
+
+
+.issue-title{
+    position:relative;
+    z-index: 2;
+    margin-top: 10%;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 1%;
+    padding-bottom: 0;
+    width:fit-content;
+    text-align: center;
+    min-height:38vh;
+    font-family: 'Raleway', sans-serif;
+	font-weight: 900;
+	line-height: 1.05;
+	color: white;
+    font-size: 17.5vh;
+}
+
+.t-minus{
+    position:relative;
+    z-index: 2;
+    height: fit-content;
+    text-align: center;
+    font-family: 'Raleway', sans-serif;
+	font-weight: 900;
+	line-height: 1.05;
+    font-size: 10vh;
+	color: black;
+	-webkit-text-stroke-width: 2px;
+	-webkit-text-stroke-color: white;
+}
+
+@media screen and (max-width: 566px) {
+    .countdown{
+        min-height: 30vh;
+    }
+    .issue-title{
+        font-size: 15vw;
+        min-height: 20vh;
+        -webkit-text-stroke-width: 2px;
+        -webkit-text-stroke-color: black;
+    }
+    .dimension{
+        animation-duration: calc(var(--animation-speed)/5);
+        font-size:50vw;
+    }
+    .t-minus{
+        font-size: 15vw;
+    }
+}
