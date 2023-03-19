@@ -1,6 +1,6 @@
 {
   "name": "infinite.magazine",
-  "homepage": "http://infinitemagazine.mit.edu/",
+  "homepage": "https://infinitemagazine.mit.edu/",
   "version": "0.1.0",
   "private": true,
   "dependencies": {

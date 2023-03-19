@@ -2,18 +2,6 @@ import { useState, useEffect, useRef } from 'react';
 import { Link , useNavigate} from 'react-router-dom';
 import '../css/pastissuepage.css';
 
-const links = [
-	"https://issuu.com/mit_infinite/docs/infinite_issue_1",
-	"https://issuu.com/mit_infinite/docs/infinite_issue_2",
-	"https://issuu.com/mit_infinite/docs/final_issue_3web",
-	"https://issuu.com/mit_infinite/docs/issue_4_full_final41819",
-	"https://issuu.com/mit_infinite/docs/issue_v",
-	"https://issuu.com/mit_infinite/docs/infinite_part_1",
-	"https://issuu.com/mit_infinite/docs/tableofcontents_f906b4f602b4f9",
-	"https://issuu.com/mit_infinite/docs/issue_8_master_file_final_fixed-compressed",
-	"https://issuu.com/mit_infinite/docs/issue9_masterfile_small",
-	"https://issuu.com/mit_infinite/docs/issuex"
-];
 const themes = ['ONE', 'TWO', 'THREE', 'FOUR', 'FIVE', 'CONTAG\nIOUS', 'STYLE', 'LIGHT', 'CHAOS', 'DIMEN\nSIONS'];
 const img_links = [
 	"https://www.dropbox.com/s/8a8wrdm0tttg3rv/issueonecover.jpg?raw=1",

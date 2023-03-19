@@ -12,6 +12,9 @@
 .links{
 	cursor: pointer;
 }
+.links .ticker div:hover{
+	text-decoration:underline;
+}
 
 #title{
 	font-size: 26.5vh;
