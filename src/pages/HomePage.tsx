@@ -2,13 +2,13 @@ import React,{useEffect} from 'react';
 import {TickerTape, Countdown, MagazinePedestal} from '../components';
 import '../css/homepage.css';
 
-const releaseDate = new Date(2023, 4,10, 20);
+const releaseDate = new Date(2023, 4, 13, 20);
 const HomePage = () =>{
     return (
         <div className = 'homepage'>
         <TickerTape title = 'INFINITE' id='title'/>
         <Countdown release_date={releaseDate}>
-           <MagazinePedestal  alt_text='INFINITE MAGAZINE ISSUE XI: REBIRTH'/>
+           <MagazinePedestal  img_link = 'images/issue11Cover.jpg' alt_text='INFINITE MAGAZINE ISSUE XI: REBIRTH'/>
         </Countdown>
         <div className = 'links'>
             <hr/>
