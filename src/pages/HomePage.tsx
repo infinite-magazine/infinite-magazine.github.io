@@ -8,7 +8,7 @@ const HomePage = () =>{
         <div className = 'homepage'>
         <TickerTape title = 'INFINITE' id='title'/>
         <Countdown release_date={releaseDate}>
-           <MagazinePedestal  img_link = 'images/issue11Cover.jpg' alt_text='INFINITE MAGAZINE ISSUE XI: REBIRTH'/>
+           <MagazinePedestal  img_link = 'images/issue11cover.png' alt_text='INFINITE MAGAZINE ISSUE XI: REBIRTH'/>
         </Countdown>
         <div className = 'links'>
             <hr/>
