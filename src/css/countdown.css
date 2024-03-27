@@ -3,20 +3,20 @@
     justify-content: center;
     z-index: -1;
     padding:3%;
-}
-.dimension-container{
-    position:relative;
+    max-height: 100vh;
+    overflow:hidden;
     margin-top:-10%;
-    height:100%;
-    width:100%;
+}
+/* .clock-container{
+    
     align-content: center;
-    vertical-align: center;
     text-align: center;
     justify-items: center;
-}
+} */
 
-.dimension{
+.clock{
     text-align: center;
+    justify-content: center;
     position:absolute;
     left:0;
     width:100%;
@@ -29,39 +29,41 @@
 	font-weight: 900;
 	line-height: 1.05;
     
-	-webkit-text-stroke-width: 2px;
+	-webkit-text-stroke-width: 0.1%;
 	-webkit-text-stroke-color: white;
-
-    animation: expansion calc(var(--animation-speed)/5) ease infinite;
+    margin-left:auto;
+    margin-right:auto;
+}
+.clock img {
+    /* overflow:hidden; */
+    height: 105vh;
+    transform-origin:center;
+    animation: clock-rotation calc(var(--animation-speed)/5) ease-in-out infinite;
     animation-direction: normal;
 }
 #dim-1{
-    animation-delay: 500ms;
-}
-#dim-2{
-    animation-delay: 1000ms;
+    animation-delay: 50ms;
+} #dim-2{
+    animation-delay: 100ms;
 }
 #dim-3{
-    animation-delay: 1500ms;
+    animation-delay: 150ms;
 }
 #dim-4{
-    animation-delay: 2000ms;
+    animation-delay: 200ms;
 }
 #dim-5{
-    animation-delay: 2500ms;
+    animation-delay: 250ms;
 }
 
-@keyframes expansion{
+@keyframes clock-rotation{
     0%{
-        transform:SkewX(0deg);
-    }
-    
-    50%{
-        transform:SkewX(20deg);
+        transform:Rotate(0deg);
     }
     100%{
-        transform:SkewX(0deg);
+        transform:Rotate(359.9deg);
     }
+    
 }
 
 
@@ -73,7 +75,6 @@
     margin-right: auto;
     padding: 1%;
     padding-bottom: 0;
-    width:fit-content;
     text-align: center;
     min-height:38vh;
     font-family: 'Raleway', sans-serif;
@@ -86,7 +87,6 @@
 .t-minus{
     position:relative;
     z-index: 2;
-    height: fit-content;
     text-align: center;
     font-family: 'Raleway', sans-serif;
 	font-weight: 900;
@@ -97,7 +97,12 @@
 	-webkit-text-stroke-color: white;
 }
 
+
 @media screen and (max-width: 566px) {
+    .clock img{
+        width: auto;
+        height: 82.5vh;
+    }
     .countdown{
         min-height: 30vh;
     }
@@ -107,7 +112,7 @@
         -webkit-text-stroke-width: 2px;
         -webkit-text-stroke-color: black;
     }
-    .dimension{
+    .clock{
         animation-duration: calc(var(--animation-speed)/5);
         font-size:50vw;
     }

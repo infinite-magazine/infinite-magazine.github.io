@@ -27,21 +27,21 @@ const Countdown = (props: CountdownProps) => {
 
     return (
         <div className='countdown' >
-            <div className='dimension-container'>
-                <div className='dimension' id='dim-1'>XI</div>
-                <div className='dimension' id='dim-2'>XI</div>
-                <div className='dimension' id='dim-3'>XI</div>
-                <div className='dimension' id='dim-4'>XI</div>
-                <div className='dimension' id='dim-5'>XI</div>
-            </div>
+            {/* <div className='clock-container'> */}
+                <div className='clock'><img id='dim-1' src='images/clock.svg' alt="Clock"/></div>
+                <div className='clock'><img id='dim-2' src='images/clock.svg' alt="Clock"/></div>
+                <div className='clock'><img id='dim-3' src='images/clock.svg' alt="Clock"/></div>
+                <div className='clock'><img id='dim-4' src='images/clock.svg' alt="Clock"/></div>
+                <div className='clock'><img id='dim-5' src='images/clock.svg' alt="Clock"/></div>
+            {/* </div> */}
 
             <div className='issue-title' >
-                ISSUE XI <br /> RE:BIRTH
+                ISSUE 12 TIME
             </div>
 
             <div className='t-minus'>
                 {/* TODO: pad 1 digit elements with a 0 */}
-                {day_str + hr_str + min_str + s_str}
+                T-{day_str + hr_str + min_str + s_str}
             </div>
         </div>
     );

@@ -3,7 +3,7 @@ import { Link , useNavigate} from 'react-router-dom';
 import '../css/pastissuepage.css';
 
 
-const themes = ['ONE', 'TWO', 'THREE', 'FOUR', 'FIVE', 'CONTAG\nIOUS', 'STYLE', 'LIGHT', 'CHAOS', 'DIMEN\nSIONS'];
+const themes = ['ONE', 'TWO', 'THREE', 'FOUR', 'FIVE', 'CONTAG\nIOUS', 'STYLE', 'LIGHT', 'CHAOS', 'DIMEN\nSIONS', 'RE:BIRTH'];
 const img_links = [
 	"https://www.dropbox.com/s/8a8wrdm0tttg3rv/issueonecover.jpg?raw=1",
 	"https://www.dropbox.com/s/v3ccczh2uoanlm2/issuetwocover.jpg?raw=1",
@@ -14,7 +14,8 @@ const img_links = [
 	"https://www.dropbox.com/s/a19lrgt6dcy9c1g/Issuesevencover.jpg?raw=1",
 	"images/issue8cover.jpg",
 	"images/issue_9_cover.jpg",
-	"images/issueXcover.jpg"
+	"images/issueXcover.jpg",
+	"images/issue11cover.png"
 ];
 
 function PastIssuesPage(props: { isMobile: boolean }) {

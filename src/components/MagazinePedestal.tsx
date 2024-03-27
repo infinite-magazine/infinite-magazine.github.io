@@ -15,31 +15,31 @@ const MagazinePedestal = (props:PedestalProps) => {
     return (
         <div className = 'pedestal'>
             <div className='container-container'
-            onClick = {e=>{navigate("/issue-view/11")}}
+            onClick = {e=>{navigate("/issue-view/12")}}
             >
-                <div className='cov-dimension-container' id='cov-side'>
-                    <div className='cov-dimension' id='cdim-1'><img src = {props.img_link} alt={props.alt_text}/></div>
-                    <div className='cov-dimension' id='cdim-2'><img src = {props.img_link} alt={props.alt_text}/></div>
-                    <div className='cov-dimension' id='cdim-3'><img src = {props.img_link} alt={props.alt_text}/></div>
-                    <div className='cov-dimension' id='cdim-4'><img src = {props.img_link} alt={props.alt_text}/></div>
-                    <div className='cov-dimension' id='cdim-5'><img src = {props.img_link} alt={props.alt_text}/></div>
+                <div className='cov-dimension-container cov-side-left'>
+                    <div className='cov-dimension cdim-1'><img src = {props.img_link} alt={props.alt_text}/></div>
+                    <div className='cov-dimension cdim-2'><img src = {props.img_link} alt={props.alt_text}/></div>
+                    <div className='cov-dimension cdim-3'><img src = {props.img_link} alt={props.alt_text}/></div>
+                    <div className='cov-dimension cdim-4'><img src = {props.img_link} alt={props.alt_text}/></div>
+                    <div className='cov-dimension cdim-5'><img src = {props.img_link} alt={props.alt_text}/></div>
                 </div>
-                <div className='cov-dimension-container' id='cov-center'>
-                    <div className='cov-dimension' id='cdim-1'><img src = {props.img_link} alt={props.alt_text}/></div>
-                    <div className='cov-dimension' id='cdim-2'><img src = {props.img_link} alt={props.alt_text}/></div>
-                    <div className='cov-dimension' id='cdim-3'><img src = {props.img_link} alt={props.alt_text}/></div>
-                    <div className='cov-dimension' id='cdim-4'><img src = {props.img_link} alt={props.alt_text}/></div>
-                    <div className='cov-dimension' id='cdim-5'><img src = {props.img_link} alt={props.alt_text}/></div>
+                <div className='cov-dimension-container cov-center'>
+                    <div className='cov-dimension cdim-1'><img src = {props.img_link} alt={props.alt_text}/></div>
+                    <div className='cov-dimension cdim-2'><img src = {props.img_link} alt={props.alt_text}/></div>
+                    <div className='cov-dimension cdim-3'><img src = {props.img_link} alt={props.alt_text}/></div>
+                    <div className='cov-dimension cdim-4'><img src = {props.img_link} alt={props.alt_text}/></div>
+                    <div className='cov-dimension cdim-5'><img src = {props.img_link} alt={props.alt_text}/></div>
                 </div>
-                <div className='cov-dimension-container' id = 'cov-side'>
-                    <div className='cov-dimension' id='cdim-1'><img src = {props.img_link} alt={props.alt_text}/></div>
-                    <div className='cov-dimension' id='cdim-2'><img src = {props.img_link} alt={props.alt_text}/></div>
-                    <div className='cov-dimension' id='cdim-3'><img src = {props.img_link} alt={props.alt_text}/></div>
-                    <div className='cov-dimension' id='cdim-4'><img src = {props.img_link} alt={props.alt_text}/></div>
-                    <div className='cov-dimension' id='cdim-5'><img src = {props.img_link} alt={props.alt_text}/></div>
+                <div className='cov-dimension-container cov-side-right'>
+                    <div className='cov-dimension cdim-1'><img src = {props.img_link} alt={props.alt_text}/></div>
+                    <div className='cov-dimension cdim-2'><img src = {props.img_link} alt={props.alt_text}/></div>
+                    <div className='cov-dimension cdim-3'><img src = {props.img_link} alt={props.alt_text}/></div>
+                    <div className='cov-dimension cdim-4'><img src = {props.img_link} alt={props.alt_text}/></div>
+                    <div className='cov-dimension cdim-5'><img src = {props.img_link} alt={props.alt_text}/></div>
                 </div>
             </div>
-            <TickerTape id='cov-banner' title='ISSUE XI OUT NOW' />
+            <TickerTape id='cov-banner' title='ISSUE 12' link="/issue-view/12"/>
         </div>
     );
 }

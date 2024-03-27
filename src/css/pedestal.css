@@ -2,8 +2,9 @@
     min-height: 60vh;
     justify-content: center;
     z-index: -1;
-    padding:3%;
+    padding-top:3%;
     padding-bottom:0;
+    
 }
 .container-container{
     display:flex;
@@ -41,9 +42,44 @@
     
 	-webkit-text-stroke-width: 2px;
 	-webkit-text-stroke-color: white;
+    
 
+}
+.cov-center{
+    .cov-dimension{
     animation: cov-expansion calc(var(--animation-speed)/10) ease infinite;
-    animation-direction: alternate-reverse;
+    animation-direction: alternate;
+    }
+    
+}
+.cov-side-left{
+    .cov-dimension{
+    animation: cov-expansion-left calc(var(--animation-speed)/10) ease infinite;
+    animation-direction:alternate;
+    }
+}
+.cov-side-right{
+    .cov-dimension{
+    animation: cov-expansion-right calc(var(--animation-speed)/10) ease infinite;
+    animation-direction: alternate;
+    }
+}
+
+.cov-dimension.cdim-5{
+    animation-delay: 500ms;
+}
+.cov-dimension.cdim-4{
+    animation-delay: 1000ms;
+}
+.cov-dimension.cdim-3{
+    animation-delay: 1500ms;
+}
+.cov-dimension.cdim-2{
+    animation-delay: 2000ms;
+}
+.cov-dimension.cdim-1{
+    /* animation:none; */
+    animation-delay:2500ms;
 }
 
 .cov-dimension>img{
@@ -52,46 +88,54 @@
     border-radius: 2%;
 }
 
-#cdim-5{
-    animation-delay: 500ms;
-}
-#cdim-4{
-    animation-delay: 1000ms;
-}
-#cdim-3{
-    animation-delay: 1500ms;
-}
-#cdim-2{
-    animation-delay: 2000ms;
-}
-#cdim-1{
-    animation:none;
-}
 
-@keyframes cov-expansion{
+
+@keyframes cov-expansion-left{
     0%{
-        transform:scale(33%);
+        transform:scale(100%);
     }
     100%{
+
+        transform:translate(30%,0) scale(33%);
+    }
+}
+
+@keyframes cov-expansion-right{
+    0%{
         transform:scale(100%);
+    }
+    100%{
+        transform:translate(-30%,0) scale(33%);
+    }
+}
+@keyframes cov-expansion{
+    0%{
+        transform:scale(100%);
+    }
+    100%{
+        transform:scale(33%);
     }
 }
 
 #cov-banner{
     position:relative;
-    height: fit-content;
+    /* height: fit-content; */
     text-align: center;
     font-family: 'Raleway', sans-serif;
 	font-weight: 900;
 	line-height: 1.05;
-    font-size: 10vh;
 	color: black;
+	background-color: white;
+    font-size: 10vh;
 	-webkit-text-stroke-width: 2px;
 	-webkit-text-stroke-color: white;
 }
 
 @media screen and (max-width: 566px) {
-    #cov-side{
+    .cov-side-right{
+        display:none;
+    }
+    .cov-side-left{
         display:none;
     }
     .cov-dimension{
@@ -99,7 +143,7 @@
     }
     .cov-dimension>img{
         max-width: 100vw;
-        border-radius: 0;
+        border-radius: 2%;
     }
     #cov-banner{
         font-size: 14.5vw;
